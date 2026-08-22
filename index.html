@@ -1,0 +1,1610 @@
+ARTI Homeo Clinic — Complete HTML Website
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="ARTI Homeo Clinic - Homeopathic Care and Online Medicine Delivery">
+
+<title>ARTI Homeo Clinic | Homeopathic Care</title>
+
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#f7fbf8;
+    color:#18352a;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#075c39;
+    color:white;
+    padding:9px 5%;
+    text-align:center;
+    font-size:14px;
+}
+
+.topbar span{
+    margin:0 15px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 5%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#075c39;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.menu a{
+    color:#18352a;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:#198754;
+}
+
+.contact-btn{
+    background:#075c39;
+    color:white!important;
+    padding:10px 18px;
+    border-radius:30px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(247,251,248,.98) 0%,
+        rgba(247,251,248,.92) 45%,
+        rgba(247,251,248,.30) 100%
+    ),
+
+    url("online-delivery.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+
+    padding:80px 5%;
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:#dff3e6;
+    color:#075c39;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+
+    color:#075c39;
+
+    font-size:clamp(42px,7vw,75px);
+
+    line-height:1.05;
+
+    max-width:750px;
+}
+
+.hero h1 span{
+    color:#123b63;
+}
+
+.hero p{
+
+    max-width:650px;
+
+    font-size:19px;
+
+    margin:22px 0;
+
+    color:#4c6258;
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    padding:14px 22px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    display:inline-block;
+
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.green{
+
+    background:#075c39;
+
+    color:white;
+}
+
+.whatsapp{
+
+    background:#25D366;
+
+    color:white;
+}
+
+.outline{
+
+    border:2px solid #075c39;
+
+    color:#075c39;
+
+    background:white;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+section{
+    padding:80px 5%;
+}
+
+.container{
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.heading{
+
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.heading small{
+
+    color:#198754;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+}
+
+.heading h2{
+
+    color:#123b63;
+
+    font-size:45px;
+
+    margin:8px 0;
+}
+
+.heading p{
+
+    color:#66776f;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+
+    background:white;
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:18px;
+}
+
+.service{
+
+    background:white;
+
+    border:1px solid #e0ebe4;
+
+    border-radius:22px;
+
+    padding:28px 18px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,80,40,.08);
+
+    transition:.3s;
+}
+
+.service:hover{
+
+    transform:translateY(-7px);
+}
+
+.service-icon{
+
+    width:65px;
+    height:65px;
+
+    background:#e5f5e9;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    margin:auto auto 15px;
+}
+
+.service h3{
+
+    color:#075c39;
+
+    margin-bottom:8px;
+}
+
+.service p{
+
+    color:#697a72;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+
+    background:#eff8f2;
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.doctor-image{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.15);
+
+    border:7px solid white;
+}
+
+.about h2{
+
+    font-size:45px;
+
+    color:#123b63;
+
+    line-height:1.15;
+}
+
+.about-text{
+
+    color:#586c63;
+
+    margin:18px 0;
+}
+
+.features{
+
+    display:grid;
+
+    gap:12px;
+
+    margin:25px 0;
+}
+
+.feature{
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border-left:
+    5px solid #198754;
+}
+
+
+/* =========================
+   DELIVERY
+========================= */
+
+.delivery{
+
+    background:white;
+}
+
+.delivery-box{
+
+    background:
+    linear-gradient(
+        135deg,
+        #063c28,
+        #0b7046
+    );
+
+    color:white;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:35px;
+
+    align-items:center;
+}
+
+.delivery-box h2{
+
+    font-size:45px;
+
+    line-height:1.1;
+}
+
+.delivery-box p{
+
+    color:#d7ebe1;
+
+    margin:18px 0;
+}
+
+.delivery-img{
+
+    border-radius:22px;
+
+    overflow:hidden;
+}
+
+.delivery-img img{
+
+    width:100%;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+
+    background:#f4faf6;
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:25px;
+}
+
+.contact-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,70,40,.08);
+}
+
+.contact-card h3{
+
+    color:#075c39;
+
+    font-size:25px;
+
+    margin-bottom:18px;
+}
+
+.contact-item{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:15px 0;
+
+    border-bottom:
+    1px solid #edf1ee;
+}
+
+.contact-icon{
+
+    font-size:25px;
+}
+
+.contact-item small{
+
+    display:block;
+
+    color:#75847d;
+}
+
+.contact-item strong{
+
+    color:#203b31;
+}
+
+.contact-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#063323;
+
+    color:#dcece4;
+
+    text-align:center;
+
+    padding:40px 5%;
+}
+
+footer h2{
+
+    color:white;
+
+    margin-bottom:8px;
+}
+
+footer p{
+
+    font-size:14px;
+}
+
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.float-buttons{
+
+    position:fixed;
+
+    right:18px;
+
+    bottom:18px;
+
+    z-index:2000;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.float-buttons a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:25px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+}
+
+.float-whatsapp{
+
+    background:#25D366;
+}
+
+.float-call{
+
+    background:#0866ff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:950px){
+
+    .menu{
+        display:none;
+    }
+
+    .service-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .about-grid,
+    .delivery-box,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .topbar{
+
+        font-size:12px;
+    }
+
+    .topbar span{
+
+        margin:0 5px;
+    }
+
+    .logo{
+
+        font-size:16px;
+    }
+
+    .logo img{
+
+        width:45px;
+
+        height:45px;
+    }
+
+    .hero{
+
+        min-height:80vh;
+    }
+
+    .hero-content{
+
+        padding:60px 5%;
+    }
+
+    .hero p{
+
+        font-size:16px;
+    }
+
+    section{
+
+        padding:60px 5%;
+    }
+
+    .heading h2,
+    .about h2,
+    .delivery-box h2{
+
+        font-size:32px;
+    }
+
+    .service-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .delivery-box{
+
+        padding:25px;
+    }
+
+    .contact-card{
+
+        padding:22px;
+    }
+
+    .btn{
+
+        width:100%;
+
+        text-align:center;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+
+    <span>🌿 प्राकृतिक देखभाल</span>
+
+    <span>🚚 Online Medicine Delivery</span>
+
+    <span>📞 9431618119</span>
+
+</div>
+
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<div class="nav">
+
+<a href="#home" class="logo">
+
+<img
+src="clinic-logo.jpg"
+alt="ARTI Homeo Clinic Logo">
+
+<span>ARTI Homeo Clinic</span>
+
+</a>
+
+
+<div class="menu">
+
+<a href="#home">
+Home
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#delivery">
+Delivery
+</a>
+
+<a
+href="#contact"
+class="contact-btn">
+
+Contact
+
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+class="hero"
+id="home">
+
+<div class="hero-content">
+
+
+<div class="badge">
+
+🌿 HOMEOPATHIC CARE
+
+</div>
+
+
+<h1>
+
+स्वस्थ जीवन की ओर
+
+<span>
+एक प्राकृतिक कदम
+</span>
+
+</h1>
+
+
+<p>
+
+ARTI Homeo Clinic में पुरुष, महिला,
+बाल, पशु तथा पुराने (Chronic) रोगों
+के लिए होम्योपैथिक consultation
+उपलब्ध है।
+
+</p>
+
+
+<div class="buttons">
+
+
+<a
+class="btn whatsapp"
+
+href="https://wa.me/919431618119?text=Namaste%20Doctor%2C%20mujhe%20consultation%20ke%20liye%20baat%20karni%20hai."
+
+target="_blank">
+
+💬 WhatsApp पर बात करें
+
+</a>
+
+
+<a
+class="btn green"
+
+href="tel:+919431618119">
+
+📞 अभी Call करें
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+class="services"
+id="services">
+
+<div class="container">
+
+
+<div class="heading">
+
+<small>
+OUR SERVICES
+</small>
+
+<h2>
+हमारी सेवाएँ
+</h2>
+
+<p>
+आपकी आवश्यकता के अनुसार
+consultation और medicine support.
+</p>
+
+</div>
+
+
+
+<div class="service-grid">
+
+
+<div class="service">
+
+<div class="service-icon">
+👨
+</div>
+
+<h3>
+पुरुष रोग
+</h3>
+
+<p>
+पुरुषों से संबंधित सामान्य
+स्वास्थ्य समस्याओं के लिए
+consultation.
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<div class="service-icon">
+👩
+</div>
+
+<h3>
+महिला रोग
+</h3>
+
+<p>
+महिलाओं के स्वास्थ्य से संबंधित
+समस्याओं के लिए consultation.
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<div class="service-icon">
+👶
+</div>
+
+<h3>
+बाल रोग
+</h3>
+
+<p>
+बच्चों के स्वास्थ्य के लिए
+उचित guidance और consultation.
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<div class="service-icon">
+🐾
+</div>
+
+<h3>
+पशु रोग
+</h3>
+
+<p>
+पालतू एवं अन्य पशुओं के लिए
+homeopathic care guidance.
+</p>
+
+</div>
+
+
+
+<div class="service">
+
+<div class="service-icon">
+🌿
+</div>
+
+<h3>
+Chronic Care
+</h3>
+
+<p>
+लंबे समय से चल रही समस्याओं
+के लिए consultation.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+class="about"
+id="about">
+
+<div class="container about-grid">
+
+
+<div class="doctor-image">
+
+<img
+src="doctor.jpg"
+alt="Doctor at ARTI Homeo Clinic">
+
+</div>
+
+
+
+<div>
+
+
+<div
+class="heading"
+style="text-align:left;margin-bottom:15px;">
+
+<small>
+ABOUT THE CLINIC
+</small>
+
+<h2>
+विश्वास, देखभाल और बेहतर मार्गदर्शन
+</h2>
+
+</div>
+
+
+<p class="about-text">
+
+ARTI Homeo Clinic का उद्देश्य मरीजों
+को सरल, सुविधाजनक और
+patient-focused homeopathic
+consultation उपलब्ध कराना है।
+
+</p>
+
+
+
+<div class="features">
+
+
+<div class="feature">
+
+✅ व्यक्तिगत consultation और guidance
+
+</div>
+
+
+<div class="feature">
+
+✅ Online medicine delivery सुविधा
+
+</div>
+
+
+<div class="feature">
+
+✅ पुरुष, महिला, बाल और पशु रोगों के लिए सेवा
+
+</div>
+
+
+<div class="feature">
+
+✅ Chronic health concerns के लिए consultation
+
+</div>
+
+
+</div>
+
+
+
+<a
+class="btn green"
+
+href="https://wa.me/919431618119"
+
+target="_blank">
+
+💬 WhatsApp से संपर्क करें
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     DELIVERY
+========================= -->
+
+<section
+class="delivery"
+id="delivery">
+
+<div class="container">
+
+
+<div class="delivery-box">
+
+
+<div>
+
+
+<div class="badge">
+
+ONLINE DELIVERY
+
+</div>
+
+
+<h2>
+
+दवा सीधे आपके घर तक 🚚
+
+</h2>
+
+
+<p>
+
+Online medicine delivery के लिए
+WhatsApp या Call करके अपनी
+आवश्यकता बताएं।
+
+उपलब्धता और delivery details
+के लिए clinic से संपर्क करें।
+
+</p>
+
+
+<p>
+
+✓ घर तक medicine delivery
+
+<br>
+
+✓ WhatsApp पर आसानी से संपर्क
+
+<br>
+
+✓ Order से पहले details की पुष्टि
+
+</p>
+
+
+
+<a
+class="btn"
+
+style="
+background:white;
+color:#075c39;
+"
+
+href="https://wa.me/919431618119?text=Namaste%20Doctor%2C%20mujhe%20medicine%20order%20karni%20hai."
+
+target="_blank">
+
+💬 Medicine Order करें
+
+</a>
+
+
+</div>
+
+
+
+<div class="delivery-img">
+
+<img
+src="online-delivery.jpg"
+alt="Online Homeopathic Medicine Delivery">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="container">
+
+
+<div class="heading">
+
+<small>
+CONTACT US
+</small>
+
+<h2>
+हमसे संपर्क करें
+</h2>
+
+<p>
+Consultation, medicine और delivery
+की जानकारी के लिए Call या WhatsApp करें।
+</p>
+
+</div>
+
+
+
+<div class="contact-grid">
+
+
+
+<!-- CONTACT DETAILS -->
+
+<div class="contact-card">
+
+
+<h3>
+📞 Contact Details
+</h3>
+
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📱
+</div>
+
+<div>
+
+<small>
+Call / WhatsApp
+</small>
+
+<strong>
+9431618119
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+📍
+</div>
+
+<div>
+
+<small>
+Clinic Address
+</small>
+
+<strong>
+
+बी एम पी 2, बस्तीपुर,
+डेहरी रोहतास, बिहार
+
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+✉️
+</div>
+
+<div>
+
+<small>
+Gmail
+</small>
+
+<strong>
+
+YOUR-GMAIL@gmail.com
+
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-buttons">
+
+
+<a
+class="btn green"
+
+href="tel:+919431618119">
+
+📞 Call Now
+
+</a>
+
+
+<a
+class="btn whatsapp"
+
+href="https://wa.me/919431618119"
+
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+
+<a
+class="btn outline"
+
+href="mailto:YOUR-GMAIL@gmail.com">
+
+✉️ Email
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- CLINIC INFORMATION -->
+
+<div class="contact-card">
+
+
+<h3>
+📍 Clinic Information
+</h3>
+
+
+<p>
+
+<b>
+ARTI Homeo Clinic
+</b>
+
+<br>
+
+प्राकृतिक उपचार • स्वस्थ जीवन
+
+</p>
+
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+🕐
+</div>
+
+<div>
+
+<small>
+Clinic Timing
+</small>
+
+<strong>
+Call/WhatsApp करके
+उपलब्धता पूछें
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+🚚
+</div>
+
+<div>
+
+<small>
+Medicine Delivery
+</small>
+
+<strong>
+Online delivery available
+</strong>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+💬
+</div>
+
+<div>
+
+<small>
+Quick Consultation
+</small>
+
+<strong>
+WhatsApp पर message भेजें
+</strong>
+
+</div>
+
+</div>
+
+
+
+<a
+class="btn green"
+
+style="
+width:100%;
+margin-top:20px;
+text-align:center;
+"
+
+href="https://www.google.com/maps/search/?api=1&query=Artu%20Homeo%20Clinic%2C%20Bastipur%2C%20Dehri%2C%20Rohtas%2C%20Bihar"
+
+target="_blank">
+
+🗺️ Google Maps पर देखें
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+<h2>
+ARTI Homeo Clinic
+</h2>
+
+
+<p>
+Homeopathic Care • Online Medicine Delivery
+</p>
+
+
+<p>
+Dehri, Rohtas, Bihar
+</p>
+
+
+<p style="margin-top:10px;">
+
+© 2026 ARTI Homeo Clinic.
+All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+
+
+<!-- =========================
+     FLOATING BUTTONS
+========================= -->
+
+<div class="float-buttons">
+
+
+<a
+class="float-whatsapp"
+
+href="https://wa.me/919431618119"
+
+target="_blank"
+
+aria-label="WhatsApp">
+
+💬
+
+</a>
+
+
+<a
+class="float-call"
+
+href="tel:+919431618119"
+
+aria-label="Call">
+
+📞
+
+</a>
+
+
+</div>
+
+
+</body>
+
+  </html>
