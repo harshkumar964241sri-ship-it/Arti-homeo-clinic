@@ -20,30 +20,22 @@ scroll-behavior:smooth;
 }
 
 body{
-  <audio id="bgMusic" loop>
-  <source src="song.mp3.mp3" type="audio/mpeg">
+  <audio id="bgMusic" loop preload="auto">
+    <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-<button onclick="playMusic()" style="
-position:fixed;
-bottom:25px;
-left:20px;
-z-index:9999;
-padding:12px 18px;
-border:0;
-border-radius:25px;
-background:#25D366;
-color:white;
-font-weight:bold;
-cursor:pointer;
-">
-🎵 Play Music
-</button>
-
 <script>
-function playMusic(){
-  const music = document.getElementById("bgMusic");
-  music.play();
+const music = document.getElementById("bgMusic");
+
+function startMusic() {
+    music.play().catch(() => {});
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+}
+
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
+</script>
 }
 </script>
         });
