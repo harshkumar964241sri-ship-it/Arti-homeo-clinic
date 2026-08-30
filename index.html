@@ -20,22 +20,32 @@ scroll-behavior:smooth;
 }
 
 body{
-  <audio id="bgMusic" autoplay loop>
-    <source src="song.mp3..mp3" type="audio/mpeg">
+  <audio id="bgMusic" loop>
+  <source src="song.mp3.mp3" type="audio/mpeg">
 </audio>
 
+<button onclick="playMusic()" style="
+position:fixed;
+bottom:25px;
+left:20px;
+z-index:9999;
+padding:12px 18px;
+border:0;
+border-radius:25px;
+background:#25D366;
+color:white;
+font-weight:bold;
+cursor:pointer;
+">
+🎵 Play Music
+</button>
+
 <script>
-window.addEventListener("load", function () {
-    const music = document.getElementById("bgMusic");
-
-    music.volume = 1.0;
-
-    const playPromise = music.play();
-
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            // Browser ne autoplay block kiya
-            console.log("Autoplay blocked by browser");
+function playMusic(){
+  const music = document.getElementById("bgMusic");
+  music.play();
+}
+</script>
         });
     }
 });
