@@ -21,6 +21,14 @@ scroll-behavior:smooth;
 }
 
 body{
+  <audio id="mySong" src="song.mp3..mp3" preload="auto"></audio>
+
+<script>
+document.addEventListener("click", function () {
+    const song = document.getElementById("mySong");
+    song.play();
+}, { once: true });
+</script>
   <audio id="bgMusic" loop preload="auto">
     <source src="song.mp3" type="audio/mpeg">
 </audio>
