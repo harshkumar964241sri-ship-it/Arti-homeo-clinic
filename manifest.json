@@ -1,6 +1,6 @@
 {
-  "name": "ARTI Homeo Clinic",
-  "short_name": "ARTI Clinic",
+  "name": "Arti Homeo Clinic",
+  "short_name": "Arti Homeo Clinic",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
